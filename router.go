@@ -208,6 +208,8 @@ func MethodNotAllowedHandler(c *Context) error {
 		i++
 	}
 	sort.Strings(ms)
+	c.Response.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Response.Header().Set("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Authorization")
 	c.Response.Header().Set("Allow", strings.Join(ms, ", "))
 	if c.Request.Method != "OPTIONS" {
 		c.Response.WriteHeader(http.StatusMethodNotAllowed)
