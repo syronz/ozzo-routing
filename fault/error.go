@@ -8,7 +8,7 @@ package fault
 import (
 	"net/http"
 
-	"github.com/go-ozzo/ozzo-routing"
+	"github.com/syronz/ozzo-routing"
 )
 
 // ErrorHandler returns a handler that handles errors returned by the handlers following this one.
@@ -23,8 +23,8 @@ import (
 //
 //     import (
 //         "log"
-//         "github.com/go-ozzo/ozzo-routing"
-//         "github.com/go-ozzo/ozzo-routing/fault"
+//         "github.com/syronz/ozzo-routing"
+//         "github.com/syronz/ozzo-routing/fault"
 //     )
 //
 //     r := routing.New()
